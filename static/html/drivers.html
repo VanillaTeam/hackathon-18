@@ -1,0 +1,25 @@
+<div class="container">
+    <?php if(!count($drivers)){ ?>
+    <div class="btn-holder">
+        <a href="/add_car"><i class="drivers"></i>Добавить</a>
+    </div>
+    <div class="none">Водителей нет!</div>
+    <?php } else { ?>
+    <table class="fields-table">
+    <tr>
+        <th>ФИО</th>
+        <th>Серия и номер паспорта</th>
+        <th></th>
+        <th><a href="/add_car"><i class="drivers"></i>Добавить</a></th>
+    </tr>
+    <?php foreach($drivers as $driver) { ?>
+    <tr>
+        <td><?php echo $driver['name'];?></td>
+        <td><?php echo $driver['passport'];?></td>
+        <td><a href="/edit_driver?id=<?=$driver['id']?>">Изменить</a></td>
+        <td><a href="/remove_driver?id=<?=$driver['id']?>">Удалить</a></td>
+    </tr>
+    <?php } ?>
+    </table>
+    <?php } ?>
+</div>

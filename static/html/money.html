@@ -1,0 +1,10 @@
+<form class="container" action="" method="POST">
+    <div class="field-holder">
+        <div class="field-name">Сумма пополнения:</div>
+        <div class="error"><?php echo isset($errors[0]) ? $errors[0] : ""; ?></div>
+        <input type="number" name="money" value="<?php echo isset($_GET['sum']) ? $_GET['sum'] : ''; ?>">
+    </div>
+    <div class="field-holder">
+        <input type="submit" name="add_money" value="Пополнить">
+    </div>
+</form>

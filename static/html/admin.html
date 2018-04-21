@@ -1,0 +1,27 @@
+<div class="container">
+    <?php if(!count($commands)){ ?>
+    <div class="btn-holder">
+        <a href="/add_command"><i class="command"></i>Добавление комманды</a>
+    </div>
+    <div class="none">Комамнд нет!</div>
+    <?php } else { ?>
+    <table class="fields-table">
+        <tr>
+            <th>Маска</th>
+            <th>Описание</th>
+            <th>Тип</th>
+            <th></th>
+            <th><a href="/add_command"><i class="command"></i>Добавление комманды</a></th>
+        </tr>
+        <?php foreach($commands as $command) { ?>
+        <tr>
+            <td><?php echo str_replace('{?[0-9]+}?', '<b><i><число></i></b>', $command['mask']);?></td>
+            <td><?php echo $command['description']; ?></td>
+            <td><?php echo $command['type'];?></td>
+            <td><a href="/edit_command?id=<?=$command['id']?>">Изменить</a></td>
+            <td><a href="/remove_command?id=<?=$command['id']?>">Удалить</a></td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+</div>

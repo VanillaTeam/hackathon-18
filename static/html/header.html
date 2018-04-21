@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="<?=$CHARSET?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <title>Vanilla Team</title>
+    <!-- Наиболее важные стили (для загрузки в первую очередь) -->
+    <link rel="stylesheet" type="text/css" href="<?=$CSS_STATIC_HTTP_PATH;?>/main.css">
+</head>
+<body>
+    <!-- Меню -->
+    <div id="menu-back"></div>
+    <div id="menu-holder">
+        <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Меню</a>
+        <nav class="container">
+            <ul class="menu">
+                <?php if (isset($_SESSION['logged_user'])) { ?>
+                <li>
+                    <a href="/cards"><i class="cards"></i>Карты</a>
+                </li>
+                <li>
+                    <a href="/cars"><i class="cars"></i>Автомобили</a>
+                </li>
+                <li>
+                    <a href="/drivers"><i class="drivers"></i>Водители</a>
+                </li>
+                <li>
+                    <a href="/account"><i class="settings"></i>Профиль</a>
+                </li>
+                <li>
+                    <a href="/logout"><i class="exit"></i>Выход</a>
+                </li>
+
+                <li>
+                    <a href="/money"><i class="deposite"></i><?php echo $DB->GetUserMoney($_SESSION['logged_user']); ?> руб.</a>
+                </li>
+                <?php } else { ?>
+                <li><a href="/register"><i class="registration"></i>Регистрация</a></li>
+                <li><a href="/login"><i class="login"></i>Вход</a></li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </div>
+    <!-- Перезагружаемый блок -->
+    <main>

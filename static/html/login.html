@@ -1,0 +1,15 @@
+<form class="container" action="" method="POST">
+    <div class="field-holder">
+        <div class="field-name">Введите логин:</div>
+        <div class="error"><?php echo isset($errors[0]) ? $errors[0] : ""; ?></div>
+        <input type="text" name="login" value="<?php echo isset($_POST['login'])? $_POST['login']: '';?>"/>
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Введите пароль:</div>
+        <div class="error"><?php echo isset($errors[1]) ? $errors[1] : ""; ?></div>
+        <input type="password" name="password" value="<?php echo isset($_POST['password'])? $_POST['password']: '';?>"/>
+    </div>
+    <div class="field-holder">
+        <input type="submit" name="do_login"/>
+    </div>
+</form>

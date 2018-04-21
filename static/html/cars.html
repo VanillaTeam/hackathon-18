@@ -1,0 +1,27 @@
+<div class="container">
+    <?php if(!count($cars)){ ?>
+    <div class="btn-holder">
+        <a href="/add_car"><i class="cars"></i>Добавить</a>
+    </div>
+    <div class="none">Автомобилей нет!</div>
+    <?php } else { ?>
+    <table class="fields-table">
+    <tr>
+        <th>Модель</th>
+        <th>Номер</th>
+        <th>Пробег</th>
+        <th></th>
+        <th><a href="/add_car"><i class="cars"></i>Добавить</a></th>
+    </tr>
+    <?php foreach($cars as $car) { ?>
+    <tr>
+        <td><?php echo $car['model'];?></td>
+        <td><?php echo $car['number'];?></td>
+        <td><?php echo $car['mileage'];?></td>
+        <td><a href="/edit_car?id=<?=$car['id']?>">Изменить</a></td>
+        <td><a href="/remove_car?id=<?=$car['id']?>">Удалить</a></td>
+    </tr>
+    <?php } ?>
+    </table>
+    <?php } ?>
+</div>

@@ -1,0 +1,20 @@
+<form class="container" action="" method="POST">
+    <div class="field-holder">
+        <div class="field-name">Модель:</div>
+        <div class="error"><?php echo isset($errors[0]) ? $errors[0] : ""; ?></div>
+        <input type="text" name="model" value="<?php echo isset($car['model'])? $car['model']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Номер:</div>
+        <div class="error"><?php echo isset($errors[1])? $errors[1]:''; ?></div>
+        <input type="text" name="number" value="<?php echo isset($car['number'])? $car['number']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Пробег:</div>
+        <div class="error"><?php echo isset($errors[2])? $errors[2]:''; ?></div>
+        <input type="text" name="mileage" value="<?php echo isset($car['mileage'])? $car['mileage']: '';?>">
+    </div>
+    <div class="field-holder">
+        <input type="submit" name="edit_car">
+    </div>
+</form>

@@ -1,0 +1,73 @@
+form .field-holder {
+    margin: 1em;
+}
+
+form .field-name {
+    margin-bottom: 0.3em;
+}
+
+form input {
+    font-size: 20px;
+    padding: 0.5em 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid #aaa;
+    width: 100%;
+    height: 2em;
+    outline: none;
+}
+
+form .success {
+    color: darkgreen;
+    margin: 0.3em 0;
+}
+
+form .error {
+    color: darkred;
+    margin: 0.3em 0;
+}
+
+form.container {
+    max-width: 500px;
+}
+
+.btn-holder {
+    padding: 0.5em 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid #aaa;
+    width: 300px;
+    height: 2em;
+    line-height: 1em;
+    margin: 1em;
+    text-align: center;
+}
+
+.fields-table {
+    margin: 1em 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2em;
+}
+
+.fields-table th {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.fields-table th:nth-child(odd) {
+    background-color: #def;
+}
+
+.fields-table th:nth-child(even) {
+    background-color: #dbefff;
+}
+
+.fields-table tr:hover td {
+    background: #e6e6fa;
+}
+
+.none {
+    margin: 1em;
+}

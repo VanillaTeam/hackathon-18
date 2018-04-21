@@ -1,0 +1,27 @@
+    </main>
+    <div id="preloader_holder" class="preloader_holder hidden">
+        <div id="preloader" class="preloader">Загрузка...</div>
+    </div>
+    <div id="new-content" class="hidden"></div>
+    <?php include $HTML_STATIC_FOLDER . '/bot.html'; ?>
+    <!-- Footer -->
+	<footer class="container">
+        <div class="copy">&copy; Vanilla Team, 2018</div>
+	</footer>
+    <!-- Остальные стили -->
+    <link rel="stylesheet" type="text/css" href="<?=$CSS_STATIC_HTTP_PATH;?>/forms.css">
+    <!-- Всякие оставшеся скрипты -->
+    <script type="text/javascript" src="<?=$JS_STATIC_HTTP_PATH;?>/jquery-3.3.1.min.js"></script>
+    <script src="<?=$JS_STATIC_HTTP_PATH;?>/transitions.js"></script>
+    <script src="<?=$JS_STATIC_HTTP_PATH;?>/menu.js"></script>
+    <script src="<?=$JS_STATIC_HTTP_PATH;?>/bot.js"></script>
+    <script src="<?=$JS_STATIC_HTTP_PATH;?>/admin.js"></script>
+    <script type="text/javascript" src="<?=$JS_STATIC_HTTP_PATH;?>/jquery.lazy.min.js"></script>
+    <script type="text/javascript">
+        // Пост загрузка изображений
+        $(function() {
+            $('.lazy').lazy();
+        });
+    </script>
+</body>
+</html>

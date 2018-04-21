@@ -1,0 +1,39 @@
+
+<div class="container">
+    <?php if(!count($cards)){ ?>
+    <div class="btn-holder">
+        <a href="/add_card"><i class="cards"></i>Добавить</a>
+    </div>
+    <div class="none">Карт нет!</div>
+    <?php } else { ?>
+    <table class="fields-table">
+    <tr>
+        <th>Номер карты</th>
+        <th>Тип Карты</th>
+        <th>Лимит</th>
+        <th>Потрачено</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th><a href="/add_card"><i class="cards"></i>Добавить</a></th>
+    </tr>
+    <?php foreach($cards as $card) { ?>
+    <tr>
+        <td><?php echo $card['id'];?></td>
+        <td><?php echo $card['type'];?></td>
+        <td><?php echo $card['max'];?></td>
+        <td><?php echo $card['spent'];?></td>
+        <?php if($card['blocked']){?>
+        <td>Карта заблокирована</td>
+        <td><a href="/block_card?id=<?=$card['id']?>">Разблокировать карту</a></td>
+        <?php }else{?>
+        <td>Карта разблокирована</td>
+        <td><a href="/block_card?id=<?=$card['id']?>">Заблокировать карту</a></td>
+        <?php } ?>
+        <td><a href="/edit_card?id=<?=$card['id']?>">Изменить</a></td>
+        <td><a href="/remove_card?id=<?=$card['id']?>">Удалить</a></td>
+    </tr>
+    <?php } ?>
+    </table>
+    <?php } ?>
+</div>

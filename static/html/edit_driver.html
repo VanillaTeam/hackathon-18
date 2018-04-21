@@ -1,0 +1,15 @@
+<form class="container" action="" method="POST">
+    <div class="field-holder">
+        <div class="field-name">ФИО:</div>
+        <div class="error"><?php echo isset($errors[0]) ? $errors[0] : ""; ?></div>
+        <input type="text" name="name" value="<?php echo isset($driver['name'])? $driver['name']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Серия и Номер паспорта:</div>
+        <div class="error"><?php echo isset($errors[1])? $errors[1]:''; ?></div>
+        <input type="text" name="passport" value="<?php echo isset($driver['passport'])? $driver['passport']: '';?>">
+    </div>
+    <div class="field-holder">
+        <input type="submit" name="edit_driver">
+    </div>
+</form>

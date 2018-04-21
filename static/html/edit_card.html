@@ -1,0 +1,20 @@
+<form class="container" action="" method="POST">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Тип топлива:</div>
+        <select class="form-control" name="type">
+            <option value="ДТ">ДТ</option>
+            <option value="АИ-92">АИ-92</option>
+            <option value="АИ-95">АИ-95</option>
+            <option value="АИ-98">АИ-98</option>
+        </select>
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Лимит карты:</div>
+        <div class="error"><?php echo isset($errors[0]) ? $errors[0] : ""; ?></div>
+        <input type="text" name="max" value="<?php echo isset($card['max'])? $card['max']: '';?>">
+    </div>
+    <div class="field-holder">
+        <input type="submit" name="edit_card">
+    </div>
+</form>

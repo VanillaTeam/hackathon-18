@@ -1,0 +1,49 @@
+<form class="container" action="" method="POST">
+    <div class="field-holder">
+        <div class="success"><?php echo isset($errors[9]) ? $errors[9] : ""; ?></div>
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Логин:</div>
+        <div class="error"><?php echo isset($errors[0]) ? $errors[0] : ""; ?></div>
+        <div class="error"><?php echo isset($errors[8]) ? $errors[8] : ""; ?></div>
+        <input type="text" name="login" value="<?php echo isset($user['login'])? $user['login']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Название организации:</div>
+        <div class="error"><?php echo isset($errors[1]) ? $errors[1] : ""; ?></div>
+        <input type="text" name="name" value="<?php echo isset($user['name'])? $user['name']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">ИНН:</div>
+        <div class="error"><?php echo isset($errors[2]) ? $errors[2] : ""; ?></div>
+        <input type="text" name="inn" value="<?php echo isset($user['inn'])? $user['inn']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Email:</div>
+        <div class="error"><?php echo isset($errors[3]) ? $errors[3] : ""; ?></div>
+        <input type="text" name="email" value="<?php echo isset($user['email'])? $user['email']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Телефон:</div>
+        <div class="error"><?php echo isset($errors[4]) ? $errors[4] : ""; ?></div>
+        <input type="text" name="phone" value="<?php echo isset($user['phone'])? $user['phone']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name" style="color: black;">Адрес:</div>
+        <div class="error"><?php echo isset($errors[5]) ? $errors[5] : ""; ?></div>
+        <input type="text" name="address" value="<?php echo isset($user['address'])? $user['address']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name" style="color: black;">Пароль:</div>
+        <div class="error"><?php echo isset($errors[6]) ? $errors[6] : ""; ?></div>
+        <input type="password" name="password">
+    </div>
+    <div class="field-holder">
+        <div class="field-name" style="color: black;">Повторите пароль:</div>
+        <div class="error"><?php echo isset($errors[7]) ? $errors[7] : ""; ?></div>
+        <input type="password" name="password_2">
+    </div>
+    <div class="field-holder">
+        <input type="submit" name="do_upload">
+    </div>
+</form>

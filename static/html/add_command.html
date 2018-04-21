@@ -1,0 +1,30 @@
+<form class="container" action="" method="POST">
+    <div class="field-holder">
+        <div class="field-name">Маска:</div>
+        <div class="error"><?php echo isset($errors[0]) ? $errors[0] : ""; ?></div>
+        <input type="text" name="mask" value="<?php echo isset($_POST['mask'])? str_replace('{?[0-9]+}?', '<число>', $_POST['mask']): '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Описание:</div>
+        <div class="error"><?php echo isset($errors[1])? $errors[1]:''; ?></div>
+        <input type="text" name="description" value="<?php echo isset($_POST['description'])? $_POST['description']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Тип:</div>
+        <div class="error"><?php echo isset($errors[2])? $errors[2]:''; ?></div>
+        <input type="text" name="type" value="<?php echo isset($_POST['type'])? $_POST['type']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Параметры:</div>
+        <div class="error"><?php echo isset($errors[4])? $errors[4]:''; ?></div>
+        <input type="text" name="extra" value="<?php echo isset($_POST['extra'])? $_POST['extra']: '';?>">
+    </div>
+    <div class="field-holder">
+        <div class="field-name">Пароль:</div>
+        <div class="error"><?php echo isset($errors[3])? $errors[3]:''; ?></div>
+        <input type="text" name="password" value="">
+    </div>
+    <div class="field-holder">
+        <input type="submit" name="add_command">
+    </div>
+</form>
